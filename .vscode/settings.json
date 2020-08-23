@@ -1,0 +1,7 @@
+{
+    "files.exclude": {
+        "**/*.o": true,
+        "**/*.ppu": true,
+        "source/fpc/*": true
+    }
+}

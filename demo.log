@@ -1,0 +1,16 @@
+2020-08-23 20:27:22 [DEMO] [Info]     Feli Stack Tracer Demo
+2020-08-23 20:27:22 [DEMO] [Info]     Attemping to divide 50 by 25
+2020-08-23 20:27:22 [DEMO] [Info]     Note: divideNumByNum calls a useless procedure
+2020-08-23 20:27:22 [DEMO] [Log]      Nothing to see here
+2020-08-23 20:27:22 [DEMO] [Info]     Note: This uselss procedure calls another useless procedure
+2020-08-23 20:27:22 [DEMO] [Info]     Note: This procedure is useless
+2020-08-23 20:27:22 [DEMO] [Success]  Random between 0 and 1 resulted in 1, good
+2020-08-23 20:27:22 [DEMO] [Success]  Result Number is 2
+2020-08-23 20:27:23 [DEMO] [Info]     Attemping to divide 25 by 0
+2020-08-23 20:27:23 [DEMO] [Info]     Note: divideNumByNum calls a useless procedure
+2020-08-23 20:27:23 [DEMO] [Log]      Nothing to see here
+2020-08-23 20:27:23 [DEMO] [Info]     Note: This uselss procedure calls another useless procedure
+2020-08-23 20:27:23 [DEMO] [Info]     Note: This procedure is useless
+2020-08-23 20:27:23 [DEMO] [Error]    Random between 0 and 1 resulted in 0, bad
+2020-08-23 20:27:23 [DEMO] [Error]    Division by zero
+2020-08-23 20:27:23 [DEMO] [Error]    Error while dividing 25 by 0
