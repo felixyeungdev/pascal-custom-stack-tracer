@@ -1,1 +1,4 @@
 /source
+*.ppu
+*.o
+*.DS_Store
