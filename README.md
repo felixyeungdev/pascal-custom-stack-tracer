@@ -21,14 +21,14 @@ but it does it's job during development
 ```
 
 2. add `demo.cfg` to project root with file content of
-```typescript
+```jsonc
 {
     "application-terminal-log": boolean, // true for enabling saving logs from FeliLogger
     "debug": boolean // true for enabling stack tracer
 }
 ```
 
-3. add following code between after `begin` and before `end`
+3. add following code between after `begin` and before `end`, replace string with your own identifier, for example the function/procedure name
 ```pascal
  FeliStackTrace.trace('begin', string);
  
