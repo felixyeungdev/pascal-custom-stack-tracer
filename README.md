@@ -16,7 +16,7 @@ but it does it's job during development
 
 ## Usage
 ### Initialise
-Add `demo.cfg` to project root with file content of
+Add `stack_trace.cfg` to project root with file content of
 ```jsonc
 {
     "show-logs": boolean, // true for enabling showing logs from FeliStackTracer.logger

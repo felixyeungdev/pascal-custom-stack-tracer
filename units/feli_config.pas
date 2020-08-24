@@ -38,7 +38,7 @@ begin
     try
         result := configObject.findPath(key).asBoolean;
     except
-        FeliLogger.save(format('[DEMO] [Error] Unable to find key %s in %s, falling back to default true', [key, configFilePath]), true);
+        FeliLogger.save(format('[Tracer] [Error] Unable to find key %s in %s, falling back to default true', [key, configFilePath]), true);
         result := fallback;
     end;
 end;
@@ -56,7 +56,7 @@ begin
     try
         result := configObject.findPath(key).asBoolean;
     except
-        FeliLogger.save(format('[DEMO] [Error] Unable to find key %s in %s, falling back to default true', [key, configFilePath]), true);
+        FeliLogger.save(format('[Tracer] [Error] Unable to find key %s in %s, falling back to default true', [key, configFilePath]), true);
         result := fallback;
     end;
 end;
