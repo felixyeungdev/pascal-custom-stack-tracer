@@ -39,7 +39,7 @@ begin
     lines := lines + dateTimeString + ' ' + payload;
     FeliFileAPI.put(logFilePath, lines);
     if forceLog then writeln(payload) else
-    if FeliConfig.getApplicationTerminalLog() then FeliStackTrace.out(payload);
+    if FeliConfig.getShowLogs() then FeliStackTrace.out(payload);
 end;
 
 class procedure FeliLogger.debug(payload: ansiString); static;

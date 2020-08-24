@@ -8,7 +8,7 @@ interface
 type 
     FeliConfig = class(TObject)
     public
-        class function getApplicationTerminalLog(): boolean; static;
+        class function getShowLogs(): boolean; static;
         class function getIsDebug(): boolean; static;
     end;
 
@@ -24,9 +24,9 @@ uses
     jsonparser,
     sysutils;
 
-class function FeliConfig.getApplicationTerminalLog(): boolean; static;
+class function FeliConfig.getShowLogs(): boolean; static;
 const
-    key = 'application-terminal-log';
+    key = 'show-logs';
     fallback = true;
 
 var 

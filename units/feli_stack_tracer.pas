@@ -104,8 +104,11 @@ end;
 
 class procedure FeliStackTrace.breakPoint(); static;
 begin
-    FeliStackTrace.out('Break Point Hit. Press Enter to continue', false);
-    readln();
+    if (FeliConfig.getIsDebug()) then
+        begin
+            FeliStackTrace.out('Break Point Hit. Press Enter to continue', false);
+            readln();
+        end;
 end;
 
 

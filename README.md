@@ -19,7 +19,7 @@ but it does it's job during development
 Add `demo.cfg` to project root with file content of
 ```jsonc
 {
-    "application-terminal-log": boolean, // true for enabling saving logs from FeliLogger
+    "show-logs": boolean, // true for enabling showing logs from FeliStackTracer.logger
     "debug": boolean // true for enabling stack tracer
 }
 ```
