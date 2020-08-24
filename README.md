@@ -15,12 +15,8 @@ but it does it's job during development
 
 
 ## Usage
-1. add `stack_trace.txt` to project root with file content of 
-```
-0
-```
-
-2. add `demo.cfg` to project root with file content of
+### Initialise
+Add `demo.cfg` to project root with file content of
 ```jsonc
 {
     "application-terminal-log": boolean, // true for enabling saving logs from FeliLogger
@@ -28,7 +24,8 @@ but it does it's job during development
 }
 ```
 
-3. add following code between after `begin` and before `end`, replace string with your own identifier, for example the function/procedure name
+### To Use
+Add following code between after `begin` and before `end`, replace string with your own identifier, for example the function/procedure name
 ```pascal
  FeliStackTrace.trace('begin', string);
  
@@ -37,9 +34,19 @@ but it does it's job during development
  FeliStackTrace.trace('end', string);
 ```
 
-4. reset FeliStackTrace before use with
+### Reset
+Reset FeliStackTrace before use with
 ```pascal
 FeliStackTrace.reset();
 ```
+put this after the main begin
+```pascal
+begin
+    FeliStackTrace.reset();
+    // Your code
+end.
+```
+
+----
 
 > Note: `begin` should follow with `end`

@@ -11,9 +11,7 @@ uses
 type 
     FeliFileAPI = class(TObject)
     public
-        class function get(path: ansiString): ansiString; static;
-        class function getJsonArray(path: ansiString): TJsonArray; static;
-        class function getJsonObject(path: ansiString): TJsonObject; static;
+        class function get(path: ansiString; defaultValue: ansiString = ''): ansiString; static;
         class procedure put(path, payload: ansiString); static;
         class procedure debug; static;
     end;
@@ -27,29 +25,14 @@ uses
     sysutils;
 
 
-class function FeliFileAPI.getJsonArray(path: ansiString): TJsonArray; static;
-var
-    load: ansiString;
-begin
-    load := FeliFileAPI.get(path);
-    result := TJsonArray(getJson(load));
-end;
 
-class function FeliFileAPI.getJsonObject(path: ansiString): TJsonObject; static;
-var
-    load: ansiString;
-begin
-    load := FeliFileAPI.get(path);
-    result := TJsonObject(getJson(load));
-end;
-
-class function FeliFileAPI.get(path: ansiString): ansiString; static;
+class function FeliFileAPI.get(path: ansiString; defaultValue: ansiString = ''): ansiString; static;
 var
     f: TextFile;
     line, all_lines: ansiString;
 
 begin
-    all_lines := '';
+    all_lines := defaultValue;
     if not FileExists(path) then 
         begin
             result := all_lines;
