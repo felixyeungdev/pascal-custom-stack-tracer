@@ -3,21 +3,21 @@
         "scope": "objectpascal",
         "prefix": "trace",
         "body": [
-            "FeliStackTrace.trace('begin', '$1');",
-            "FeliStackTrace.trace('end', '$1');"
+            "FeliStackTracer.trace('begin', '$1');",
+            "FeliStackTracer.trace('end', '$1');"
         ],
         "description": "Feli Stack Tracer"
     },
     "Stack Trace Begin": {
         "scope": "objectpascal",
         "prefix": "trace.begin",
-        "body": ["FeliStackTrace.trace('begin', '$1');"],
+        "body": ["FeliStackTracer.trace('begin', '$1');"],
         "description": "Feli Stack Tracer"
     },
     "Stack Trace End": {
         "scope": "objectpascal",
         "prefix": "trace.end",
-        "body": ["FeliStackTrace.trace('end', '$1');"],
+        "body": ["FeliStackTracer.trace('end', '$1');"],
         "description": "Feli Stack Tracer"
     }
 }

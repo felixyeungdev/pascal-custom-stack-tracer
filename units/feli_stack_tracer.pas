@@ -6,7 +6,7 @@ interface
 uses fpjson, feli_logger;
 
 type
-    FeliStackTrace = class(TObject)
+    FeliStackTracer = class(TObject)
         public
             type
                 logger = FeliLogger;
@@ -44,7 +44,7 @@ begin
     result := tempStr;
 end;
 
-class procedure FeliStackTrace.trace(kind, name: ansiString); static;
+class procedure FeliStackTracer.trace(kind, name: ansiString); static;
 var
     tempString, spaces: ansiString;
     i, depth: integer;
@@ -73,7 +73,7 @@ begin
     end;
 end;
 
-class procedure FeliStackTrace.out(load: String; newLine: boolean = true); static;
+class procedure FeliStackTracer.out(load: String; newLine: boolean = true); static;
 var
     tempString, spaces: ansiString;
     i, depth: integer;
@@ -94,7 +94,7 @@ begin
 
 end;
 
-class procedure FeliStackTrace.reset(); static;
+class procedure FeliStackTracer.reset(); static;
 var
     tempDir: ansiString;
 begin
@@ -102,11 +102,11 @@ begin
     FeliFileAPI.put(tempDir + stackTraceDepthPath, '1');
 end;
 
-class procedure FeliStackTrace.breakPoint(); static;
+class procedure FeliStackTracer.breakPoint(); static;
 begin
     if (FeliConfig.getIsDebug()) then
         begin
-            FeliStackTrace.out('Break Point Hit. Press Enter to continue', false);
+            FeliStackTracer.out('Break Point Hit. Press Enter to continue', false);
             readln();
         end;
 end;

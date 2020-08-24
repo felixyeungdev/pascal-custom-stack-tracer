@@ -27,22 +27,22 @@ Add `demo.cfg` to project root with file content of
 ### To Use
 Add following code between after `begin` and before `end`, replace string with your own identifier, for example the function/procedure name
 ```pascal
- FeliStackTrace.trace('begin', string);
+ FeliStackTracer.trace('begin', string);
  
  // Your code
 
- FeliStackTrace.trace('end', string);
+ FeliStackTracer.trace('end', string);
 ```
 
 ### Reset
-Reset FeliStackTrace before use with
+Reset FeliStackTracer before use with
 ```pascal
-FeliStackTrace.reset();
+FeliStackTracer.reset();
 ```
 put this after the main begin
 ```pascal
 begin
-    FeliStackTrace.reset();
+    FeliStackTracer.reset();
     // Your code
 end.
 ```
