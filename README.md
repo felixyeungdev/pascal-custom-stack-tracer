@@ -50,3 +50,17 @@ end.
 ----
 
 > Note: `begin` should follow with `end`
+
+
+## Available Functions
+```pascal
+FeliStackTracer.breakPoint();
+FeliStackTracer.reset();
+FeliStackTracer.trace(kind: string; name: string);
+FeliStackTracer.logger.debug(string);
+FeliStackTracer.logger.log(string);
+FeliStackTracer.logger.error(string);
+FeliStackTracer.logger.warn(string);
+FeliStackTracer.logger.info(string);
+FeliStackTracer.logger.success(string);
+```
