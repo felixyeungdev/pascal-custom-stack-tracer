@@ -64,3 +64,6 @@ FeliStackTracer.logger.warn(string);
 FeliStackTracer.logger.info(string);
 FeliStackTracer.logger.success(string);
 ```
+
+## License
+Licensed under the [MIT License](LICENSE)
